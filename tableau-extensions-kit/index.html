@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KPI Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="extension-shell" aria-live="polite">
+    <section id="empty-state" class="panel hidden">
+      <p><strong>KPI Card</strong></p>
+      <p>Right-click this zone and choose <em>Configure</em> to pick a worksheet and columns.</p>
+    </section>
+
+    <section id="no-data" class="panel hidden">
+      <p>No data for the current filters.</p>
+    </section>
+
+    <section id="error-state" class="panel panel-error hidden"></section>
+
+    <section id="card-state" class="hidden">
+      <div id="row-notice" class="notice hidden"></div>
+      <div id="cards" class="cards"></div>
+    </section>
+  </main>
+
+  <script src="tableau.extensions.1.latest.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

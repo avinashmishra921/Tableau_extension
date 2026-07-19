@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Configure KPI Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="config-body">
+  <main class="config-shell">
+    <header class="config-header">
+      <h1>KPI Card</h1>
+    </header>
+
+    <section id="config-error" class="panel panel-error hidden"></section>
+
+    <form id="config-form" class="config-form">
+      <label for="worksheet-select">Worksheet</label>
+      <select id="worksheet-select" required></select>
+
+      <label for="label-select">Label column</label>
+      <select id="label-select" required disabled></select>
+
+      <label for="value-select">Value column</label>
+      <select id="value-select" required disabled></select>
+
+      <label for="compare-select">Comparison column</label>
+      <select id="compare-select" disabled></select>
+
+      <label for="delta-mode-select">Delta display</label>
+      <select id="delta-mode-select">
+        <option value="percent">Percent</option>
+        <option value="absolute">Absolute</option>
+        <option value="hidden">Hidden</option>
+      </select>
+
+      <label for="delta-context">Delta context text</label>
+      <input id="delta-context" type="text" maxlength="40">
+
+      <label class="toggle-row" for="positive-is-good">
+        <input id="positive-is-good" type="checkbox">
+        <span>Positive change is good</span>
+      </label>
+
+      <label class="toggle-row" for="show-total-card">
+        <input id="show-total-card" type="checkbox">
+        <span>Show total KPI card</span>
+      </label>
+
+      <label for="total-label">Total card label</label>
+      <input id="total-label" type="text" maxlength="40">
+
+      <h2 class="form-section-title">Style</h2>
+
+      <label for="label-color">Label color</label>
+      <input id="label-color" type="color">
+
+      <label for="label-font-size">Label size</label>
+      <input id="label-font-size" type="number" min="10" max="24" step="1">
+
+      <label for="value-color">Value color</label>
+      <input id="value-color" type="color">
+
+      <label for="value-font-size">Value size</label>
+      <input id="value-font-size" type="number" min="18" max="56" step="1">
+
+      <label for="delta-font-size">Delta size</label>
+      <input id="delta-font-size" type="number" min="10" max="24" step="1">
+
+      <label for="positive-delta-color">Positive delta color</label>
+      <input id="positive-delta-color" type="color">
+
+      <label for="negative-delta-color">Negative delta color</label>
+      <input id="negative-delta-color" type="color">
+
+      <label for="card-background">Card fill</label>
+      <select id="card-background">
+        <option value="#ffffff">White</option>
+        <option value="transparent">No fill</option>
+        <option value="custom">Custom color</option>
+      </select>
+
+      <label for="card-background-color">Card fill color</label>
+      <input id="card-background-color" type="color">
+
+      <label class="toggle-row" for="card-border">
+        <input id="card-border" type="checkbox">
+        <span>Card border</span>
+      </label>
+
+      <label for="card-border-color">Card border color</label>
+      <input id="card-border-color" type="color">
+
+      <h2 class="form-section-title">Total Style</h2>
+
+      <label for="total-label-color">Total label color</label>
+      <input id="total-label-color" type="color">
+
+      <label for="total-label-font-size">Total label size</label>
+      <input id="total-label-font-size" type="number" min="10" max="24" step="1">
+
+      <label for="total-value-color">Total value color</label>
+      <input id="total-value-color" type="color">
+
+      <label for="total-value-font-size">Total value size</label>
+      <input id="total-value-font-size" type="number" min="18" max="64" step="1">
+
+      <label for="total-delta-font-size">Total delta size</label>
+      <input id="total-delta-font-size" type="number" min="10" max="24" step="1">
+
+      <label for="total-positive-delta-color">Total positive delta color</label>
+      <input id="total-positive-delta-color" type="color">
+
+      <label for="total-negative-delta-color">Total negative delta color</label>
+      <input id="total-negative-delta-color" type="color">
+
+      <label for="total-card-background">Total card fill</label>
+      <select id="total-card-background">
+        <option value="#ffffff">White</option>
+        <option value="transparent">No fill</option>
+        <option value="custom">Custom color</option>
+      </select>
+
+      <label for="total-card-background-color">Total card fill color</label>
+      <input id="total-card-background-color" type="color">
+
+      <label class="toggle-row" for="total-card-border">
+        <input id="total-card-border" type="checkbox">
+        <span>Total card border</span>
+      </label>
+
+      <label for="total-card-border-color">Total border color</label>
+      <input id="total-card-border-color" type="color">
+
+      <div class="dialog-actions">
+        <button id="cancel-button" type="button" class="secondary-button">Cancel</button>
+        <button id="save-button" type="submit" class="primary-button">Save</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="tableau.extensions.1.latest.min.js"></script>
+  <script src="config.js"></script>
+</body>
+</html>
